@@ -1,16 +1,19 @@
 
 import './App.css';
-import { Routes, Route, Link } from "react-router-dom";
-import Header from './Components/Header';
-import SignIn from './Components/SignIn';
+import { Routes, Route, } from "react-router-dom";
+import Header from './Components/Home/Header';
+import Navbar from './Components/Home/Navbar';
+import Alltodo from './Components/Alltodo';
+
 
 function App() {
   return (
+
     <div className="App">
-      
+      <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Header></Header>}></Route>
-        <Route path='/signin' element={<SignIn></SignIn>}></Route>
+        <Route path='/alltodo' element={<Alltodo></Alltodo>}></Route>
       </Routes>
     </div>
   );
